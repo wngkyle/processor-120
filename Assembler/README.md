@@ -1,4 +1,5 @@
 Name: Kyle Wang
+
 Email: ww2301@nyu.edu
 
 The E20 assembler program is completed. It was able to pass the 9 test cases on Gradescope. The assembler developed is case insensitive, 
