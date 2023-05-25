@@ -1,7 +1,3 @@
-Kyle Wang
-ww2301@nyu.edu
-N17024217
-
 The assignment is fully completed. It simulates a E20 processor with either one-level cache, or two-level cache. The only resources used to 
 complete this project is the E20 manual and lecture slides. The strength of this simulator is it is capacble of simulating up to 
 two caches, and the configurations of the cache are not fixed. They can be customized and are specified by the users. However, the 
