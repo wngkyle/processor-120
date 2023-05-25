@@ -1,7 +1,3 @@
-Kyle Wang
-ww2301@nyu.edu
-N17024217
-
 The E20 simulator is completed. The program developed completely by myself. The only resources that I used is the E20 instruction manual 
 and the multicycle circuit diagram provided to us. 
 
