@@ -1,7 +1,3 @@
-Name: Kyle Wang
-
-Email: ww2301@nyu.edu
-
 The E20 assembler program is completed. It was able to pass the 9 test cases on Gradescope. The assembler developed is case insensitive, 
 meaning both uppercase or lowercase operation codes and labels are acceptable. This is done by converting all letters to lowercase even 
 before start formatting the instructions, so case doesn't affect the final result. The program also allow spaces between register values,
