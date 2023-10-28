@@ -18,3 +18,10 @@ The assembler developed is case insensitive, meaning both uppercase or lowercase
 
 After reading the instructions from the assembly language files, the program converts all uppercase letters in the instructions to lowercase using the `all_to_lowercase()` function. The reason why I chose to convert everything to lowercase first is because this will facilitate the formatting process a lot, and it also prevents double labeling when setting up the labels. With everything in lowercase, the program marks all the labels using the `marking_labels()` function. This function stores all the labels and the address they are pointing to in a dictionary. The name of the label is the key, and the address is the value. Instruction lines with only labels are also removed from the list called instructions in this function. Unnecessary elements like comma, $, (), and " " are then removed using the `remove_symbols()` function. This is because symbols might confuse the program when trying to convert from assembly to machine code. With everything formatted, the instructions along with the dictionary holding all the labels are then passed to the `convert_assembly_to_machine` function. Using other sub-functions like `instructions_with_three_registers()`, `instructions_with_two_registers()`, `instructions_with_no_registers()`, `movi_to_addi()`, `nop_to_add()`, `fill()`, and `halt_to_j()`, the `convert_assembly_to_machine()` functions converts all the assembly instructions into machine code and returns them back to `main()`. The results are then displayed using the given `print_machine_code()` function.
 
+### Disassembler 
+
+
+### Simulator
+
+
+
