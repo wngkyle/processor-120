@@ -31,5 +31,14 @@ In addition to the features described above, the simulator is capable of tolerat
 
 ### Simulator
 
+This simulator simulates the operation of the processor. The strength of this simulator is it is capable of simulating up to two caches, and the configurations of the cache are not fixed. They can be customized and are specified by the users. However, the weakness is when incorrect cache size, associativity, or block size are passed into the parameters, the program does not automatically correct or detect the error. Users have to ensure the right values are passed to prevent any error or crash.
+
+Since the fetch stage is not considered in this project, the only instructions that can modify and read memory are the `lw` and `sw` instructions. The two instructions have their own helper functions to help keep track of and update the current status of the memory and caches. For `lw`, `lw_two_caches()` is used when two caches are initialized, and `lw_one_cache()` is used when only one cache is initialized. Similarly, for `sw`, `sw_two_caches()` is used when there are two caches, and `sw_one_cache()` is used when there is only one cache. For both instructions, when called, the program will determine if one or two caches are initialized and then calculate the row and tag of the address in each cache.
+
+For `lw`, with row and tag computed, the program will then the help functions to see if the value exists in the caches. For instance, when two caches are initialized, if miss in L1, it will search L2. If it misses again in L2, then it will pull the value from memory. If hit in L1, then it will stop the search and return. The same concept applies when there is only one cache. Any search in the cache that results in a miss will end up calling the `update_cache_and_status()` function. This function will update the missed value into the cache either from an upper-level cache or from the main memory. In addition, update_cache_and_status also updates the order in which blocks have been used to help implement the LRU policy for eviction.
+
+For `sw`, the `update_cache_and_status()` function is called immediately after entering the function. The `sw` instruction also uses the write-through with a write-allocate policy for writing values. Lastly, the helper functions for both instructions also update the cache log whenever they are called regardless of the search result.
+
+
 
 
