@@ -5,6 +5,8 @@
 - [Assembler](#assembler)
 - [Disassembler](#disassembler)
 - [Simulator](#simulator)
+- [Built With](#built-with)
+- [Technology Used](#technology-used)
 
 ### Assembler
 
@@ -39,6 +41,15 @@ For `lw`, with row and tag computed, the program will then the help functions to
 
 For `sw`, the `update_cache_and_status()` function is called immediately after entering the function. The `sw` instruction also uses the write-through with a write-allocate policy for writing values. Lastly, the helper functions for both instructions also update the cache log whenever they are called regardless of the search result.
 
+### Built With
 
+- C++
+- Python
+- x86 Assembly Language
+
+### Technologies Used 
+
+- Microsoft Visual Studio Code
+- Github
 
 
